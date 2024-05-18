@@ -1,0 +1,154 @@
+body {
+  margin: 0px;
+  background-color: lightgray;
+  font-family: sans-serif;
+}
+
+.receipt-body {
+  width: 450px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid lightgray;
+  padding-bottom: 80px;
+  background-color: white;
+  padding: 20px;
+  position: relative;
+}
+
+.top {
+  padding: 10px;
+  display: flex;
+  flex: 1 1;
+  column-gap: 170px;
+  background-color: red;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+
+.arrow {
+  font-size: 23px;
+}
+
+.first {
+  color: white;
+  font-weight: bolder;
+}
+
+.top-img {
+  width: 60px;
+}
+
+.container {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  background-color: white;
+  margin-top: 60px;
+  padding-top: 15px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.top-grid {
+  display: grid;
+grid-template-columns: 200px 1fr;
+  column-gap: 80px;
+}
+
+.tr {
+  font-weight: bolder;
+  color: gray;
+  margin-left: 50px;
+}
+
+.zenith2 {
+  width: 20px;
+}
+
+.s-grid {
+  display: flex;
+  flex: 40px 1;
+  column-gap: -50px;
+}
+
+.zenith {
+  font-size: 16px;
+  color: gray;
+  font-weight: bolder;
+}
+
+.date-container {
+  padding: 10px 40px;
+  color: white;
+  font-weight: bold;
+  background-color: red;
+  width: 250px;
+  margin-top: 30px;
+  margin-left: 40px;
+}
+
+.co {
+  padding: 20px 40px;
+}
+
+.labeling {
+  margin-left: 10px;
+  font-size: 12px;
+  font-weight: bolder;
+}
+
+.pro {
+  font-size: 11px;
+ 
+}
+
+.line {
+  color: lightgray;
+}
+
+
+.footer {
+  font-size: 10px;
+  color: gray;
+  margin-top: 30px;
+  margin-left: 15px;
+  font-weight: bolder;
+  width: 340px;
+}
+
+.disclaimer  {
+  color: black;
+  font-size: 13px;
+  font-weight: bolder;
+}
+
+.end {
+  background-color: red;
+  color: white;
+  font-size: 10px;
+  padding: 20px;
+  margin-top: 30px;
+  margin-bottom: -21px;
+}
+
+.button {
+  margin-top: 50px;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: blue;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:active {
+  background-color: white;
+  color: blue;
+  border: 2px solid blue;
+}
+  
+

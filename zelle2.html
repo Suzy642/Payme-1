@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    ZELLE RECEIPT 
+  </title>
+    <link rel="stylesheet" href="zelle.css">
+     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
+    </script>
+</head>
+<body onload = "autoClick();">
+  <div class="receipt-body" id = "htmlContent">
+    <div class="top">
+      <center>
+        Confirmation 
+      </center>
+    </div>
+    <center class="img-cover">
+      <img src="images/mark.png">
+    </center>
+    <center class="we">
+      we're sending your money now. <span id="first-info">
+        Dee Jay 
+      </span>
+      <br>
+      will get it in a few minutes.
+    </center>
+    <center class="amount">
+      &dollar;<span id="second-info">
+        1,000
+      </span>
+      .00
+    </center>
+    <center class="icon-cover">
+      <span class="icon" id="third-info">
+        DJ
+      </span>
+      <span class="z">
+        Z
+      </span>
+    </center>
+    <center class="name2" id="four-info">
+      Dee Jay 
+    </center>
+    <center class="regis">
+      Registered as <span id="five-info">
+        Dee Jay 
+      </span>
+    </center>
+    <center class="email" id="six-info">
+      receiveremail@gmail.com
+    </center>
+    <center class="btn">
+      Done
+    </center>
+  </div>
+  <center>
+    <a class="button" id="download">
+   Download receipt 
+  </a>
+</center>
+<script src="zelle2.js"></script>
+ <script type="text/javascript">
+      function autoClick(){
+        $("#download").click();
+      }
+
+      $(document).ready(function(){
+        var element = $("#htmlContent");
+
+        $("#download").on('click', function(){
+
+          html2canvas(element, {
+            onrendered: function(canvas) {
+              var imageData = canvas.toDataURL("image/jpg");
+              var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-stream");
+              $("#download").attr("download", "image.jpg").attr("href", newData);
+            }
+          });
+
+        });
+      });
+    </script>
+</body>
+</html>

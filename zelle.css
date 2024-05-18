@@ -1,0 +1,157 @@
+body {
+  margin: 0px;
+  background-color: lightgray;
+  font-family: sans-serif;
+}
+
+.receipt-body {
+  width: 400px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid lightgray;
+  padding-bottom: 80px;
+  background-color: white;
+  padding: 50px 0px;
+  position: relative;
+}
+
+.ps {
+  color: gray;
+  padding: 0px 0px 70px 0px;
+}
+
+img {
+  width: 100px;
+}
+
+.amount {
+  color: black;
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.to {
+  padding: 20px;
+  color: gray;
+}
+
+.name {
+  font-weight: bolder;
+  font-size: 18px;
+}
+
+.line {
+  color: lightgray;
+}
+
+.note {
+  font-size: 11px;
+  padding: 10px 0px;
+}
+
+.note2 {
+  font-size: 10px;
+  color: gray;
+}
+
+.button {
+  margin-top: 50px;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: blue;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button:active {
+  background-color: white;
+  color: blue;
+  border: 2px solid blue;
+}
+  
+  
+  
+  /*ZELLE2*/
+  
+  .top {
+    background-color: #DEDEDE;
+    padding: 20px;
+    position: absolute;
+    color: gray;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+  }
+  
+  .img-cover {
+    margin-top: 80px;
+  }
+  
+  .we {
+    color: gray;
+    margin-top: 40px;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  
+  .icon-cover {
+    margin: 50px 0px;
+  }
+  
+  .icon {
+    background-color: #858585;
+    color: white;
+    width: 40px;
+    padding: 15px;
+    border-radius: 60px;
+    position: relative;
+    font-weight: bolder;
+    font-size: 18px;
+  }
+  
+  .z {
+    padding: 3px;
+    background-color: white;
+    border-radius: 60px;
+    color: #B327FF;
+    font-weight: bolder;
+    font-size: 12px;
+    position: absolute;
+    right: 177px;
+    top: 370px;
+  }
+  
+  
+.name2 {
+  color: gray;
+  font-weight: bolder;
+  font-size: 17px;
+}
+
+.regis {
+  color: gray;
+  font-weight: bold;
+}
+
+.email {
+  color: gray;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.btn {
+  color: white;
+  background-color: #3C8CFF;
+  width: 180px;
+  padding: 10px;
+  margin-top: 130px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  border-radius: 10px;
+  font-weight: bold;
+}

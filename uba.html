@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    UBA RECEIPT 
+  </title>
+  <link rel="stylesheet" href="uba.css">
+      <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
+    </script>
+</head>
+<body  onload = "autoClick();">
+<div class="receipt-body" id = "htmlContent">
+  <div class="top">
+    <div></div>
+    <div class="tran-top">
+      Transaction Receipt 
+    </div>
+    <div>
+       <img class="img-top" src="images/uba3.png">
+    </div>
+  </div>
+  <div class="transaction-detail">
+     Transaction Details:-
+  </div>
+  <div class="line">
+    _____________________________________________________
+  </div>
+  <div class="in">
+    <label>
+      Date:
+    </label>
+    <span id="date">
+      
+    </span>
+    -
+    <span id="month">
+      
+    </span>
+    -
+    <span id="year">
+      
+    </span>
+  </div>
+  <div class="in">
+    <label>
+      Time:
+    </label>
+    <span id="time">
+     
+    </span>
+  </div>
+  <div class="in">
+    <label>
+      Reference:
+    </label>
+    <span id="string_inner_container">
+      
+    </span>
+  </div>
+  <div class="in">
+    <label>
+      Amount:
+    </label>
+    <span id="first-info">
+      1,000<span>
+        .00 NGN
+      </span>
+    </span>
+  </div>
+    <div class="in">
+    <label>
+      Status:
+    </label>
+    <span>
+      SUCCESSFULL
+    </span>
+  </div>
+  <div class="in">
+    <label>
+      Type:
+    </label>
+    <span>
+      Credit
+    </span>
+  </div>
+  <div class="transaction-detail">
+     Accounts Details:-
+  </div>
+  <div class="line">
+    _____________________________________________________
+  </div>
+    <div class="in">
+    <label>
+      Sender Name:
+    </label>
+    <span id="second-info">
+      Dee Jay 
+    </span>
+  </div>
+  <div class="in">
+    <label>
+      Sender Account Number:
+    </label>
+    <span id="third-info">
+      12345678901
+    </span>
+  </div>
+  <div class="in">
+    <label>
+      Receiver Name:
+    </label>
+    <span id="four-info">
+      Dee Jay 
+    </span>
+  </div>
+  <div class="in">
+    <label>
+     Receiver Account Number:
+    </label>
+    <span id="five-info">
+      12345678901
+    </span>
+  </div>
+  <div class="in">
+    <label>
+      Narration:
+    </label>
+    <span id="six-info">
+      Bills
+    </span>
+  </div>
+</div>
+<center>
+  <a class="button" id="download">
+   Download receipt 
+  </a>
+</center>
+<script src="uba.js"></script>
+    <script type="text/javascript">
+      function autoClick(){
+        $("#download").click();
+      }
+
+      $(document).ready(function(){
+        var element = $("#htmlContent");
+
+        $("#download").on('click', function(){
+
+          html2canvas(element, {
+            onrendered: function(canvas) {
+              var imageData = canvas.toDataURL("image/jpg");
+              var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-stream");
+              $("#download").attr("download", "image.jpg").attr("href", newData);
+            }
+          });
+
+        });
+      });
+    </script>
+</body>
+</html>

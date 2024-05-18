@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    DETAILS 
+  </title>
+     <link rel="stylesheet" href="cash.css">
+</head>
+<body>
+ <div class="top">
+  <center>
+    <img class="logo-payme" src="images/payme.png">
+  </center>
+</div>  
+<center>
+  <img class="logo-input" src="images/chipper.png">
+</center>
+<form class="input-container" id="form">
+  <center>
+  <label>
+    CURRENCY:
+  </label><br>
+  <input id="firstInfo" type="text" placeholder="NGN USD EUR" required><br><br>
+  <label>
+    AMOUNT:
+  </label><br>
+  <input id="secondInfo" type="tel" placeholder="1,000" required><br><br>
+  <center>
+      <label>
+    SENDER NAME:
+  </label><br>
+  <input id="thirdInfo" type="text" placeholder="Dee Jay" required><br><br>  <label>
+    RECEIVER'S NAME:
+  </label><br>
+  <input id="fourInfo" type="text" placeholder="Dee Jay" required><br><br>  <label>
+    RECEIVER'S NUMBER:
+  </label><br>
+  <input id="fiveInfo" type="tel" placeholder="12345678901" required><br><br>  <label>
+    BANK:
+  </label><br>
+  <input id="sixInfo" type="text" placeholder="Access Bank" required><br><br>  <label>
+    NARRATION:
+  </label><br>
+  <input id="sevenInfo" type="text" placeholder="Bills" required><br><br>  <label>
+    CURRENCY:
+  </label><br>
+  <input id="eightInfo" type="text" placeholder="NGN USD EUR" required><br><br>  <label>
+    AMOUNT:
+  </label><br>
+  <input id="nineInfo" type="tel" placeholder="1,000" required><br><br>
+    <button onclick="submit()">
+      Generate receipt 
+    </button>
+  </center>
+  </center>
+</form>
+<script src="chipper-input.js"></script>
+</body>
+</html>

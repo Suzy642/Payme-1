@@ -1,0 +1,162 @@
+body {
+  margin: 0px;
+  background-color: lightgray;
+  font-family: sans-serif
+}
+
+.receipt-body {
+  width: 550px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid lightgray;
+  padding-bottom: 80px;
+  background-color: #F0F0F0;
+  position: relative;
+}
+
+.top-grid {
+  display: grid;
+  grid-template-columns: 150px 1fr;
+  background-color: white;
+  font-weight: bolder;
+  font-size: 16px;
+  column-gap: 200px;
+}
+
+.container {
+  padding: 20px;
+  margin-top: 80px;
+  width: 500px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  background-color: white;
+}
+
+img {
+  width: 80px;
+  margin-left: 20px;
+}
+
+.amount-cover {
+  color: #3EA75A;
+  font-weight: bolder;
+  font-size: 24px;
+  margin-top: 30px;
+}
+
+.amount {
+ 
+}
+
+.st {
+  font-size: 14px;
+}
+
+.date {
+  font-size: 14px;
+  padding: 5px;
+  color: gray;
+}
+
+.line {
+  color: lightgray;
+  font-size: 15px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 170px 1fr;
+}
+
+.left {
+  font-weight: bold;
+  color: gray;
+  padding: 15px;
+}
+
+.right {
+  color: gray;
+  text-align: right;
+  font-size: 15px;
+}
+
+.right6 {
+  color: gray;
+  text-align: right;
+  font-size: 15px;
+  padding-top: 10px;
+}
+
+.ms {
+  margin-left: 240px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.sright {
+  text-align: right;
+}
+
+.name {
+  font-weight: bolder;
+  font-size: 16px;
+  color: black;
+  padding: 10px 0px 20px 0px;
+}
+
+.left2 {
+  font-weight: bold;
+  padding: 10px;
+  color: gray;
+}
+
+.gleft {
+  font-weight: bolder;
+  color: gray;
+  font-size: 12px;
+}
+
+.grid-end {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+}
+
+.end {
+  font-size: 17px;
+  color: gray;
+  margin-top: 30px;
+}
+
+.ng {
+  color: #3EA75A;
+}
+
+.last {
+  font-size: 12px;
+  color: gray;
+  font-weight: bold;
+}
+
+.button {
+  margin-top: 50px;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: blue;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:active {
+  background-color: white;
+  color: blue;
+  border: 2px solid blue;
+}
+  
+

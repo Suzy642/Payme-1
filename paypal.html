@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    PAYPAL RECEIPT 
+  </title>
+  <link rel="stylesheet" href="paypal.css">
+     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
+    </script>
+</head>
+<body onload = "autoClick();">
+  <div class="receipt-body" id = "htmlContent">
+    <div class="grid">
+      <div class="menu">
+        &#9776
+      </div>
+      <div>
+        <img src="images/paypal2.png">
+      </div>
+      <div>
+        <img src="images/notif.png">
+      </div>
+    </div>
+    <div class="second-body">
+       <center>
+        You've Sent
+       </center>
+       <center>
+          &dollar;<span id="first-info">
+        1,000
+        </span>
+        .00 to
+       </center>
+       <center id="second-info">
+         Dee Jay 
+       </center>
+       <center class="send">
+          Send More Money 
+       </center>
+        <center class="go">
+          Go to Summary 
+        </center>
+    </div>
+  </div>
+  <center>
+      <a class="button" id="download">
+   Download receipt 
+  </a>
+</center>
+<script src="paypal.js"></script>
+    <script type="text/javascript">
+      function autoClick(){
+        $("#download").click();
+      }
+
+      $(document).ready(function(){
+        var element = $("#htmlContent");
+
+        $("#download").on('click', function(){
+
+          html2canvas(element, {
+            onrendered: function(canvas) {
+              var imageData = canvas.toDataURL("image/jpg");
+              var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-stream");
+              $("#download").attr("download", "image.jpg").attr("href", newData);
+            }
+          });
+
+        });
+      });
+    </script>
+</body>
+</html>

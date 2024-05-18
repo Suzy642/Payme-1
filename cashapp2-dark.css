@@ -1,0 +1,183 @@
+body {
+  margin: 0px;
+  background-color: lightgray;
+  font-family: sans-serif;
+}
+
+.dm {
+  margin-top: 50px;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dm:active {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+
+.receipt-body {
+  width: 400px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid lightgray;
+  padding-bottom: 80px;
+  background-color: black;
+  padding: 20px;
+  color: white;
+}
+
+.circle {
+  padding: 20px;
+  border-radius: 60px;
+  background-color: #E803FF;
+  color: white;
+  font-weight: bolder;
+  width: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.name {
+  font-weight: bolder;
+  font-size: 17px;
+}
+
+.pn {
+  color: gray;
+}
+
+.amount {
+  padding: 160px 0px 10px 0px;
+  font-weight: bolder;
+  font-size: 26px;
+}
+
+.today {
+  color: gray;
+}
+
+.complete {
+  width: 180px;
+  background-color: #14E31E;
+  color: white;
+  font-weight: bolder;
+  border-radius: 50px;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.d-btn {
+  margin-top: 50px;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: blue;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.d-btn:active {
+  background-color: white;
+  color: blue;
+  border: 2px solid blue;
+}
+  
+
+  
+  /*PENDING*/
+  
+
+.name2 {
+  font-weight: bolder;
+  font-size: 17px;
+  color: #8B8484;
+}
+
+.pn2 {
+  color: #8B8484;
+}
+
+.amount2 {
+  padding: 160px 0px 10px 0px;
+  font-weight: bolder;
+  color:  #8B8484;
+  font-size: 26px;
+}
+
+.today2 {
+  color: #8B8484;
+}
+
+
+.pending {
+  width: 180px;
+  background-color: black;
+  color: #14E31E;
+  border: 1px solid #14E31E;
+  font-weight: bolder;
+  border-radius: 50px;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.failed {
+  width: 180px;
+  background-color: black;
+  color: red;
+  border: 1px solid red;
+  font-weight: bolder;
+  border-radius: 50px;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+
+.failedd {
+  width: 180px;
+  background-color: black;
+  color: red;
+  border: 1px solid red;
+  font-weight: bolder;
+  border-radius: 50px;
+  padding: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.amount3 {
+  color: #7C7979;
+  padding: 160px 0px 10px 0px;
+  font-weight: bolder;
+  color: lightgray;
+  font-size: 26px;
+}
+
+

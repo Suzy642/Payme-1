@@ -1,0 +1,75 @@
+body {
+  margin: 0px;
+  background-color: lightgray;
+  font-family: sans-serif;
+}
+
+.dm {
+  margin-top: 50px;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 10px;
+  color: black;
+  background-color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.dm:active {
+  background-color: black;
+  color: white;
+  border: 2px solid white;
+}
+
+
+.receipt-body {
+  width: 500px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid lightgray;
+  padding-bottom: 80px;
+  background-color: black;
+  padding: 20px;
+  color: white;
+}
+
+img {
+  width: 40px;
+  border-radius: 60%;
+}
+
+.receipt {
+  padding-top: 20px;
+  font-weight: bolder;
+}
+
+.btn {
+  margin-top: 300px;
+  padding: 10px;
+  border-radius: 50px;
+  background-color: #04DB32;
+  color: white;
+  text-align: center;
+  width: 280px;
+  font-weight: bolder;
+}
+
+.d-btn {
+  margin-top: 50px;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: blue;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.d-btn:active {
+  background-color: white;
+  color: blue;
+  border: 2px solid blue;
+}
+  
+

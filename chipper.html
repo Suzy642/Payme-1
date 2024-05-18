@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+  <link rel="stylesheet" href="chipper.css">
+     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
+    </script>
+</head>
+<body onload = "autoClick();">
+  <div class="receipt-body" id = "htmlContent">
+    <div class="top">
+      <div>X</div>
+      <div class="tr">Transaction Receipt</div>
+      <div></div>
+    </div>
+    <center>
+      <img class="top-img" src="images/chipper-top.png">
+    </center>
+    <center>
+      <img class="green" src="images/cashgreen.png">
+    </center>
+    <center class="set">
+      Settled 
+    </center>
+     <center class="amount">
+      <span id="first-info">
+        NGN
+      </span>
+      <span id="second-info">
+        1,000
+      </span>
+      .00
+    </center>
+    <div class="second-body">
+      <div class="grid">
+        <div class="left">
+          Transaction ID
+        </div>
+        <div class="right" id="string_inner_container">
+          MKYMJ7YGNK
+        </div>
+      </div>
+      <center class="line">
+        _____________________________________________________
+      </center>
+        <div class="grid">
+      <div class="left">
+        Sender Name
+      </div>
+      <div class="right" id="third-info">
+        Dee Jay 
+      </div>
+    </div>
+    <center class="line">
+      _____________________________________________________
+    </center>
+      <div class="grid">
+      <div class="left">
+        Recipient Name
+      </div>
+      <div class="right" id="four-info">
+        Dee Jay 
+      </div>
+    </div>
+    <center class="line">
+      _____________________________________________________
+    </center>  <div class="grid">
+      <div class="left">
+        Account Number 
+      </div>
+      <div class="right" id="five-info">
+        1234567890
+      </div>
+    </div>
+    <center class="line">
+      _____________________________________________________
+    </center>  <div class="grid">
+      <div class="left">
+        Bank
+      </div>
+      <div class="right" id="six-info">
+        Access Bank Plc
+      </div>
+    </div>
+    <center class="line">
+      _____________________________________________________
+    </center>  <div class="grid">
+      <div class="left">
+        Reason for Payment 
+      </div>
+      <div class="right" id="seven-info">
+        Bills
+      </div>
+    </div>
+    <center class="line">
+      _____________________________________________________
+    </center>  <div class="grid">
+      <div class="left">
+        Amount 
+      </div>
+      <div class="right">
+        <span id="eight-info">
+          NGN
+        </span>
+        <span id="nine-info">
+          1,000
+        </span>
+        .00
+      </div>
+    </div>
+    <center class="line">
+      _____________________________________________________
+    </center>
+    </div>
+    <center class="share">
+      Share
+    </center>
+  </div>
+  <center>
+      <a class="button" id="download">
+   Download receipt 
+  </a>
+</center>
+  <script src="chipper.js"></script>
+    <script type="text/javascript">
+      function autoClick(){
+        $("#download").click();
+      }
+
+      $(document).ready(function(){
+        var element = $("#htmlContent");
+
+        $("#download").on('click', function(){
+
+          html2canvas(element, {
+            onrendered: function(canvas) {
+              var imageData = canvas.toDataURL("image/jpg");
+              var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-stream");
+              $("#download").attr("download", "image.jpg").attr("href", newData);
+            }
+          });
+
+        });
+      });
+    </script>
+</body>
+</html>

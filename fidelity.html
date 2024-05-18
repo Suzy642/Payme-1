@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    FIDELITY BANK RECEIPT 
+  </title>
+  <link rel="stylesheet" href="fidelity.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
+    </script>
+</head>
+<body onload = "autoClick();">
+  <div class="receipt-body" id = "htmlContent">
+    <img class="logo" src="images/fidelity2.png">
+    <div class="top-left">
+      <p class="ob">
+        Online Banking 
+      </p>
+      <p class="tr">
+        Transaction Receipt 
+      </p>
+    </div>
+    <div class="line">
+      ______________________________________________________________
+    </div>
+    <div class="grid">
+      <div class="left">
+        Payer
+      </div>
+      <div class="right">
+        <span id="second-info">
+          Dee Jay 
+        </span>
+        <br>
+        <span id="third-info">
+          12345678901
+        </span>
+        <br>
+        <span>
+          Fidelity Bank Plc
+        </span>
+      </div>
+    </div>
+    <div class="line">
+      ______________________________________________________________
+    </div>
+    <div class="grid">
+      <div class="left">
+        Receiver
+      </div>
+      <div class="right">
+        <span id="four-info">
+          Dee Jay 
+        </span>
+        <br>
+        <span id="five-info">
+          12345678901
+        </span>
+        <br>
+        <span id="six-info">
+          Access Bank Plc
+        </span>
+      </div>
+    </div>   
+    <div class="line">
+      ______________________________________________________________
+    </div>
+    <div class="grid">
+      <div class="left">
+        Transaction
+      </div>
+      <div class="right">
+        <span>
+          NGN
+          <span id="first-info">
+            1,000
+          </span>
+          .00
+        </span>
+        <br>
+        <span class="inn">
+          INTER TRANSFER 
+          <span id="month">
+            
+          </span>
+          <span id="date">
+           
+          </span>
+          <span id="year">
+            
+          </span>
+          , 
+          <span id="time">
+            
+          </span> GMT+1
+        </span>
+      </div>
+    </div>
+    <div class="line">
+      ______________________________________________________________
+    </div>
+    <div class="grid">
+      <div class="left">
+        Reference 
+      </div>
+      <div class="right">
+        <span id="string_inner_container">
+          ONB3347739936526784888
+        </span>
+        <br>
+        <span>
+          SUCCESSFUL
+        </span>
+      </div>
+    </div>
+    <div class="line">
+      ______________________________________________________________
+    </div>
+    <div class="grid2">
+      <div>
+        <img class="scan" src="images/scan.png">
+      </div>
+      <div class="end-right">
+        This ia an electronic receipt of transaction and does not require any signature. The authenticity of transaction can be confirmed with the Bank.
+For any other assistance, kindly call true server on +234 1 448 5252 or
+email true.server@fidelitybank.ng
+      </div>
+    </div>
+  </div>
+  <center>
+      <a class="button" id="download">
+   Download receipt 
+  </a>
+</center>
+<script src="fidelity.js"></script>
+    <script type="text/javascript">
+      function autoClick(){
+        $("#download").click();
+      }
+
+      $(document).ready(function(){
+        var element = $("#htmlContent");
+
+        $("#download").on('click', function(){
+
+          html2canvas(element, {
+            onrendered: function(canvas) {
+              var imageData = canvas.toDataURL("image/jpg");
+              var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-stream");
+              $("#download").attr("download", "image.jpg").attr("href", newData);
+            }
+          });
+
+        });
+      });
+    </script>
+</body>
+</html>

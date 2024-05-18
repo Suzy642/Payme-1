@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    GTBANK RECEIPT 
+  </title>
+  <link rel="stylesheet" href="gtb2.css">
+     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
+    </script>
+</head>
+<body onload = "autoClick();">
+  <div class="receipt-body" id = "htmlContent">
+    <div class="top">
+      <div>
+        <div class="receipt">
+          Receipt 
+        </div>
+        <div class="date">
+          <span id="date">
+            
+          </span>
+          /
+          <span id="month">
+           
+          </span>
+          /
+          <span id="year">
+            
+          </span>
+          <span id="time">
+            
+          </span>
+        </div>
+      </div>
+      <div>
+        <img class="gtb-img" src="images/gtb.png">
+      </div>
+    </div>
+    <div class="amount-co">
+      &#8358;<span class="amount" id="first-info">
+      1,000
+      </span>.00
+    </div>
+    <div class="words" id="second-info">
+      One thousand naira only 
+    </div>
+    <div class="complete">
+      Completed
+    </div>
+   <div class="co">
+     <div>
+        <div class="label">
+          Sender:
+        </div>
+       <div class="info" id="third-info">
+          Dee Jay 
+       </div>
+     </div>
+     <div>
+        <div class="label">
+          Receiver:
+        </div>
+       <div class="info" id="four-info">
+          Dee Jay 
+       </div>
+     </div>
+     <div>
+        <div class="label">
+          Account Number:
+        </div>
+       <div class="info" id="five-info">
+          12345678901
+       </div>
+     </div>    
+     <div>
+        <div class="label">
+          Receiving Bank:
+        </div>
+       <div class="info" id="six-info">
+          Access Bank 
+       </div>
+     </div>    
+     <div>
+        <div class="label">
+          Reference:
+        </div>
+       <div class="info" id="string_inner_container">
+          0000132308120945500000059959641
+       </div>
+     </div>    
+     <div>
+        <div class="label">
+          Remark:
+        </div>
+       <div class="info" id="seven-info">
+         Bills
+       </div>
+     </div>
+   </div>
+   <div class="nss">
+     NIBSS instant payment Outward 0000132308120945500000059959641
+     <br>FeedPurchase to <span id="eight-info">
+       Dee Jay 
+     </span> / <span id="nine-info">
+       Access Bank Plc
+     </span>
+   </div>
+   <div class="line">
+     _________________________________________________
+   </div>
+   <div class="bottom-grid">
+     <div class="dd">
+       Download <br>
+       the new<br>
+       GTWorld app
+     </div>
+     <div>
+       <img class="scan" src="images/scan.png">
+     </div>
+   </div>
+   <div class="end">
+     Your transfer has been successful and the beneficiary's account will be credited, However this does not serve as<br>
+confirmation of credit to the beneficiary's account, Due to the natrue of the internet transactions maybe subject to<br>
+interruption
+   </div>
+  </div>
+  <center>
+   <a class="button" id="download">
+   Download receipt 
+  </a>
+</center>
+<script src="gtb2.js"></script>
+    <script type="text/javascript">
+      function autoClick(){
+        $("#download").click();
+      }
+
+      $(document).ready(function(){
+        var element = $("#htmlContent");
+
+        $("#download").on('click', function(){
+
+          html2canvas(element, {
+            onrendered: function(canvas) {
+              var imageData = canvas.toDataURL("image/jpg");
+              var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-stream");
+              $("#download").attr("download", "image.jpg").attr("href", newData);
+            }
+          });
+
+        });
+      });
+    </script>
+</body>
+</html>

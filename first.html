@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    FIRST BANK RECEIPT
+  </title>
+  <link rel="stylesheet" href="first.css">
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
+    </script>
+</head>
+<body onload = "autoClick();">
+  <div class="receipt-body" id = "htmlContent">
+    <center>
+      <img src="images/first2.png">
+    </center>
+    <center class="transaction-receipt">
+      Transaction Receipt 
+    </center>
+    <center class="line">
+      ___________________________________________________________________
+    </center>
+    <div class="rb">
+      <div class="each">
+        <label>
+          Transaction Date:
+        </label>
+        <span id="day">
+           
+        </span>
+        <span id="month_date_time">
+          
+        </span>
+        <span>
+          WAT
+        </span>
+        <span id="year">
+         
+        </span>
+      </div>
+      <div class="each">
+        <label>
+          Transaction Type:
+        </label>
+        <span>
+          Transfer
+        </span>
+      </div>
+      <div class="each">
+        <label>
+          Amount:
+        </label>
+        <span id="first-info">
+          1,000<span>
+            .00
+          </span>
+        </span>
+      </div>
+      <div class="each">
+        <label>
+          Source Account:
+        </label>
+        <span id="third-info">
+          1234****902
+        </span>
+      </div>
+      <div class="each">
+        <label>
+          Source Account Name:
+        </label>
+        <span id="second-info">
+          Dee Jay 
+        </span>
+      </div>
+      <div class="each">
+        <label>
+          Beneficiary Account Number:
+        </label>
+        <span id="five-info">
+          12345678901
+        </span>
+      </div>
+      <div class="each">
+        <label>
+          Beneficiary Name:
+        </label>
+        <span id="four-info">
+          Dee Jay 
+        </span>
+      </div>
+      <div class="each">
+        <label>
+          Bank:
+        </label>
+        <span id="six-info">
+          Access Bank plc
+        </span>
+      </div>      
+      <div class="each">
+        <label>
+          Narration:
+        </label>
+        <span id="seven-info">
+          Bills
+        </span>
+      </div>      
+    </div>
+    <center class="line2">
+      ___________________________________________________________________
+   </center>
+   <center class="generate">
+     Generated from FirstMobile
+   </center>
+  </div>
+  <center>
+      <a class="button" id="download">
+   Download receipt 
+  </a>
+</center>
+<script src="first.js"></script>
+    <script type="text/javascript">
+      function autoClick(){
+        $("#download").click();
+      }
+
+      $(document).ready(function(){
+        var element = $("#htmlContent");
+
+        $("#download").on('click', function(){
+
+          html2canvas(element, {
+            onrendered: function(canvas) {
+              var imageData = canvas.toDataURL("image/jpg");
+              var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-stream");
+              $("#download").attr("download", "image.jpg").attr("href", newData);
+            }
+          });
+
+        });
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,104 @@
+body {
+  margin: 0px;
+  background-color: lightgray;
+  font-family: sans-serif;
+}
+
+.receipt-body {
+  width: 380px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid lightgray;
+  padding-bottom: 220px;
+  background-color: white;
+  position: relative;
+}
+
+.grid {
+  display: flex;
+  flex: 70px 70px 70px;
+  justify-content: space-around;
+  column-gap: 60px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  background-color:  #1E2892;
+  color: white;
+  padding: 5px;
+}
+
+.menu {
+  padding: 10px 30px;
+}
+
+img {
+  width: 50px;
+}
+
+.second-body {
+  margin-top: 160px;
+  color: gray;
+  font-size: 24px;
+}
+
+.send {
+  background-color:  #1E2892;
+  padding: 10px;
+  border-radius: 50px;
+  width: 250px;
+  font-size: 17px;
+  color: white;
+  font-weight: bold;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  margin-top: 50px;
+}
+
+.go {
+  color:  #1E2892;
+  font-size: 17px;
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.button {
+  margin-top: 50px;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: blue;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:active {
+  background-color: white;
+  color: blue;
+  border: 2px solid blue;
+}
+  
+  
+  
+  
+  
+  .rec {
+    margin-top: 120px;
+    color: #1E2892;
+    font-size: 17px;
+  }
+  
+  .rname {
+    padding: 70px 0px;
+    font-weight: bolder;
+    color: #1E2892;
+  }
+
+.note {
+  color:  #1E2892;
+  font-size: 11px;
+}

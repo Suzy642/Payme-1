@@ -1,0 +1,84 @@
+body {
+  margin: 0px;
+  background-color: lightgray;
+  font-family: sans-serif;
+}
+
+.receipt-body {
+  width: 500px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid lightgray;
+  background-image: url("images/first-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 80px;
+  background-color: white;
+  padding: 20px;
+}
+
+
+img {
+  width: 180px;
+  padding-top: 30px;
+}
+
+.transaction-receipt {
+  color: #050C56;
+  font-weight: bolder;
+}
+
+.line {
+  color: #BE9E70;
+  font-weight: bolder;
+}
+
+.line2 {
+  color: #BE9E70;
+  font-weight: bolder;
+  margin-top: 30px;
+}
+
+.rb {
+  margin-top: 20px;
+}
+
+.each {
+  padding: 6px 0px;
+}
+
+label {
+  color: #050C56;
+  font-weight: bolder;
+}
+
+span {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.generate {
+  color: #050C56;
+  font-weight: bolder;
+}
+
+.button {
+  margin-top: 50px;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: blue;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:active {
+  background-color: white;
+  color: blue;
+  border: 2px solid blue;
+}
+  

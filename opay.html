@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    OPAY RECEIPT 
+  </title>
+  <link rel="stylesheet" href="opay.css">
+     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
+    </script>
+</head>
+<body onload = "autoClick();">
+    <div class="receipt-body" id = "htmlContent">
+    <div class="container">
+      <div class="top-grid">
+        <div>
+          <img src="images/opay2.png">
+        </div>
+        <div>
+          Transaction Receipt 
+        </div>
+      </div>
+      <center class="amount-cover">
+        &#8358;<span class="amount" id="first-info">
+          1,000
+        </span>
+        .00
+      </center>
+      <center class="st">
+        Successful Transaction
+      </center>
+      <center class="date">
+          <span id="month">
+          
+          </span>
+          <span id="date">
+          
+         </span>
+         ,
+          <span id="year">
+          
+         </span>
+          <span id="time">
+          
+         </span>
+      </center>
+      <center class="line">
+        -------------------------------------------------------------------------------------------------------------------
+      </center>
+      <div class="grid">
+        <div class="left">
+          Transaction Type:
+        </div>
+        <div class="ms">
+          Money Sent
+        </div>
+        <div class="left">
+          Recipient Details:
+        </div>
+        <div class="right">
+          <div class="name" id="four-info">
+            Dee Jay 
+          </div>
+            <span class="sright" id="six-info">
+             Access Bank Plc
+           </span>|<span class="sright" id="five-info">
+            1234567890
+            </span>
+        </div>
+      </div>
+      <center class="line">
+        --------------------------------------------------------------------------------------------------------------------
+      </center>
+      <div class="grid">
+        <div class="left">
+          Sender Details:
+        </div>
+        <div class="right">
+          <div class="name" id="second-info">
+            Dee Jay 
+          </div>
+          <span class="sright">
+            Opay
+          </span>|<span class="sright" id="third-info">
+            1234567890
+          </span>
+        </div>
+      </div>
+       <center class="line">
+        --------------------------------------------------------------------------------------------------------------------
+      </center>
+      <div class="grid-end">
+        <div class="left2">
+          Transaction Reference:
+       </div>
+        <div class="right6" id="string_inner_container">
+          563356788642223567764
+        </div>
+        <div class="left">
+          SessionID:
+        </div>
+        <div class="right6" id="string_inner_container">
+          226763356788864467886532678864
+        </div>
+
+      </div>
+      <center class="line">
+        ----------------------------------------------------------------------------------------------------------------------
+      </center>
+      <center class="end">
+        Support
+      </center>
+      <center class="ng">
+        ng.support@opay-inc.com
+      </center>
+      <center class="line">
+        ----------------------------------------------------------------------------------------------------------------------
+      </center>
+      <div class="last">
+        Enjoy a better life with OPay. Get free transfer free, withdrawals,
+        <br>
+        free bills payment, instant loans and up to 15%
+        <br>
+        interest on savings. OPay is licensed by Central Bank of Nigeria
+        <br>
+        and insured by the NDIC.
+      </div>
+    </div>
+  </div>
+  <center>
+      <a class="button" id="download">
+   Download receipt 
+  </a>
+</center>
+<script src="opay.js"></script>
+    <script type="text/javascript">
+      function autoClick(){
+        $("#download").click();
+      }
+
+      $(document).ready(function(){
+        var element = $("#htmlContent");
+
+        $("#download").on('click', function(){
+
+          html2canvas(element, {
+            onrendered: function(canvas) {
+              var imageData = canvas.toDataURL("image/jpg");
+              var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-stream");
+              $("#download").attr("download", "image.jpg").attr("href", newData);
+            }
+          });
+
+        });
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    CASHAPP RECEIPT 
+  </title>
+  <link rel="stylesheet" id="cssfile" href="cashapp-light.css">
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
+    </script>
+</head>
+<body onload = "autoClick();">
+  <center>
+    <button id="dmbutton" class="dm">
+      Dark Mode
+    </button>
+  </center>
+  <div class="receipt-body" id = "htmlContent">
+    <img src="images/cashgreen.png">
+    <div class="receipt">
+      Sent! &dollar;<span id="first-info">
+        1,000
+      </span>
+       will be deposited
+       <br>
+       once <span id="second-info">
+         Dee Jay 
+       </span>
+       <br>
+       completes the payment.
+    </div>
+    <div class="btn">
+      Done
+    </div>
+  </div>
+  <center>
+   <a class="d-btn" id="download">
+     Download receipt 
+  </a>
+</center>
+<script src="cashapp.js"></script>
+<script type="text/javascript">
+  document.getElementById('dmbutton').addEventListener('click',function(){
+    const css = document.getElementById('cssfile');
+    const dmb = document.getElementById('dmbutton');
+    
+    if(dmb.innerHTML == 'Dark Mode'){
+      css.setAttribute('href','cashapp-dark.css');
+      dmb.innerHTML = 'Light Mode';
+    }else {
+      css.setAttribute('href','cashapp-light.css');
+      dmb.innerHTML = 'Dark Mode';
+    }
+    
+  })
+  
+  
+  
+  function autoClick(){
+        $("#download").click();
+      }
+
+      $(document).ready(function(){
+        var element = $("#htmlContent");
+
+        $("#download").on('click', function(){
+
+          html2canvas(element, {
+            onrendered: function(canvas) {
+              var imageData = canvas.toDataURL("image/jpg");
+              var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-stream");
+              $("#download").attr("download", "image.jpg").attr("href", newData);
+            }
+          });
+
+        });
+      });
+</script>
+</body>
+</html>

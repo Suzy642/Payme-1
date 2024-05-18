@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    CASHAPP DETAILS 
+  </title>
+  <link rel="stylesheet" href="cash.css">
+</head>
+<body>
+   <div class="top">
+  <center>
+    <img class="logo-payme" src="images/payme.png">
+  </center>
+</div>  
+<center>
+  <img class="logo-input" src="images/cashapp.png">
+</center>
+<form class="input-container" id="form">
+  <center>
+  <label>
+    AMOUNT:
+  </label><br>
+  <input id="firstInfo" type="tel" placeholder="1000.00" required><br><br>
+  <label>
+    RECIEVER'S NAME:
+  </label><br>
+  <input id="secondInfo" type="text" placeholder="Dee Jay" required><br><br>
+  <center>
+    <button onclick="submit()">
+      Generate receipt 
+    </button>
+  </center>
+  </center>
+</form>
+<script src="cashapp-input.js"></script>
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    ZENITH BANK RECEIPT
+  </title>
+  <link rel="stylesheet" href="zenith.css">
+   <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
+    </script>
+</head>
+<body onload = "autoClick();">
+<div class="receipt-body" id = "htmlContent">
+  <div class="top">
+    <div class="first">
+      <span class="arrow">
+        &leftarrow;
+      </span>
+      Transaction Receipt 
+    </div>
+    <div>
+      <img class="top-img" src="images/zenith.png">
+    </div>
+  </div>
+  <div class="container">
+    <div class="top-grid">
+      <div class="tr">
+        Transaction Receipt 
+      </div>
+      <div class="s-grid">
+        <img class="zenith2" src="images/zenith2.png">
+        <span class="zenith">
+          ZENITH 
+        </span>
+      </div>
+    </div>
+    <center class="date-container">
+      <span id="day">
+        
+      </span>
+      ,
+      <span id="date">
+        
+      </span>
+      <span id="month">
+        
+      </span>
+      <span id="year">
+       
+      </span>
+    </center>
+    <div class="co">
+      <div >
+        <label class="labeling">
+          Transaction Type:
+        </label>
+        <span class="pro">
+          Inter-Bank Transfer 
+        </span>
+      </div>
+     <div class="line">
+      ______________________________________________
+     </div>
+      <div >
+        <label class="labeling">
+          Transaction Date:
+        </label>
+        <span class="pro">
+          <span id="datee">
+            
+          </span>
+          -
+          <span id="monthh">
+            
+          </span>
+          -
+          <span id="yearr">
+           
+          </span>
+          
+          <span id="time">
+           
+          </span>
+        </span>
+      </div>
+     <div class="line">
+      ______________________________________________
+     </div>      
+     <div >
+        <label class="labeling">
+          Debt Account:
+        </label>
+        <span class="pro" id="second-info">
+          1234****901
+        </span>
+      </div>
+     <div class="line">
+      ______________________________________________
+     </div>      
+     <div >
+        <label class="labeling">
+          Credit Account:
+        </label>
+        <span class="pro" id="four-info">
+          12345678901
+        </span>
+      </div>
+     <div class="line">
+      ______________________________________________
+     </div>     
+     <div >
+        <label class="labeling">
+          Beneficiary:
+        </label>
+        <span class="pro" id="third-info">
+          Dee Jay 
+        </span>
+      </div>
+     <div class="line">
+      ______________________________________________
+     </div>     
+     <div >
+        <label class="labeling">
+          Bank:
+        </label>
+        <span class="pro" id="five-info">
+          Access Bank Plc
+        </span>
+      </div>
+     <div class="line">
+      ______________________________________________
+     </div>      
+     <div >
+        <label class="labeling">
+          Narration:
+        </label>
+        <span class="pro" id="six-info">
+          Bills
+        </span>
+      </div>
+     <div class="line">
+      ______________________________________________
+     </div>
+      <div >
+        <label class="labeling">
+          Status:
+        </label>
+        <span class="pro">
+          Successful
+        </span>
+      </div>
+     <div class="line">
+      ______________________________________________
+     </div>     
+     <div >
+        <label class="labeling">
+          Amount:
+        </label>
+        <span class="pro">
+          &#8358;
+          <span class="pro" id="first-info">
+            1,000
+          </span>
+          .00
+        </span>
+      </div>
+     <div class="line">
+      ______________________________________________
+     </div>
+     
+     <div class="footer">
+       <span class="disclaimer">
+          DISCLAIMER:
+       </span> Your transportation has been successfully processed
+         Note, however, that completion of any transfer may be affected
+         by order factors including but not limited transmission error
+         complete information fluctuations on the network/Internet.
+        interruptions. glitch delayed information or other matters
+        beyond the banks control which may impact on transaction and for the Bank will not liable. All transaction are
+        subject to Zenith Bank confirmation and fraud proof verification 
+     </div>
+     <div class="end">
+       For any other assistance, kindly contact us on
+       <br>zenithdirect@zenithbank.com and 234-1-2787000
+     </div>
+    </div>
+  </div>
+</div>
+  <center>
+      <a class="button" id="download">
+   Download receipt 
+  </a>
+</center>
+<script src="zenith.js"></script>
+    <script type="text/javascript">
+      function autoClick(){
+        $("#download").click();
+      }
+
+      $(document).ready(function(){
+        var element = $("#htmlContent");
+
+        $("#download").on('click', function(){
+
+          html2canvas(element, {
+            onrendered: function(canvas) {
+              var imageData = canvas.toDataURL("image/jpg");
+              var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-stream");
+              $("#download").attr("download", "image.jpg").attr("href", newData);
+            }
+          });
+
+        });
+      });
+    </script>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    DETAILS 
+  </title>
+  <link rel="stylesheet" href="input.css">
+</head>
+<body>
+     <div class="top">
+  <center>
+    <img class="logo-payme" src="images/payme.png">
+  </center>
+</div>  
+<center>
+  <img class="logo-input" src="images/kuda.png">
+</center>
+<form class="input-container" id="form">
+  <center>
+  <label>
+    AMOUNT:
+  </label><br>
+  <input id="firstInfo" type="tel" placeholder="1000" required><br><br>
+  <label>
+    SENDER'S NAME:
+  </label><br>
+  <input id="secondInfo" type="text" placeholder="Dee Jay" required><br><br>
+    <label>
+    SENDER'S ACCOUNT NO:
+  </label><br>
+  <input id="thirdInfo" type="tel" placeholder="12345678901" required><br><br>
+    <label>
+    RECEIVER'S NAME:
+  </label><br>
+  <input id="fourInfo" type="text" placeholder="Dee Jay" required><br><br>
+    <label>
+    RECEIVER'S ACCOUNT NO:
+  </label><br>
+  <input id="fiveInfo" type="tel" placeholder="12345678901" required><br><br>
+    <label>
+    RECEIVING BANK:
+  </label><br>
+  <input id="sixInfo" type="text" placeholder="Access bank plc" required><br><br>
+    <label>
+    NARRATION:
+  </label><br>
+  <input id="sevenInfo" type="text" placeholder="Bills" required><br><br>
+  <center>
+    <button onclick="submit()">
+      Generate receipt 
+    </button>
+  </center>
+</center>
+<script src="kuda-input.js"></script>
+</body>
+</html>

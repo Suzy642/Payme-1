@@ -1,0 +1,103 @@
+body {
+  margin: 0px;
+  background-color: lightgray;
+  font-family: sans-serif;
+}
+
+.receipt-body {
+  width: 450px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid lightgray;
+  padding-bottom: 80px;
+  background-color: white;
+  padding: 20px;
+  position: relative;
+  background-image: url("images/gtb-background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 80px;
+  background-color: white;
+}
+
+.top-grid {
+  display: flex;
+  flex: 1 200px;
+  column-gap: 320px;
+}
+
+.gtb {
+  font-size: 11px;
+  margin-top: -2px;
+}
+
+.gg {
+  font-size: 11px;
+  margin-left: 70px;
+  margin-top: -10px;
+}
+
+img {
+  text-align: right;
+  width: 60px;
+  margin-left: 60px;
+}
+
+.tr {
+  font-weight: bolder;
+}
+
+.container {
+  margin-left: 40px;
+}
+
+.ll {
+  margin: 5px 0px;
+}
+
+label {
+  color: #FE830C;
+  font-weight: bolder;
+  font-size: 12px;
+}
+
+.info {
+  font-size: 11px;
+}
+
+.end {
+  font-size: 10px;
+  color: gray;
+  width: 320px;
+  margin-top: 40px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.dis {
+  font-weight: bolder;
+  color: black;
+}
+
+.button {
+  margin-top: 50px;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: blue;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:active {
+  background-color: white;
+  color: blue;
+  border: 2px solid blue;
+}
+  
+

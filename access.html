@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    ACCESS BANK RECEIPT
+  </title>
+  <link rel="stylesheet" href="access.css">
+        <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
+    </script>
+</head>
+<body onload = "autoClick();">
+<div class="receipt-body" id = "htmlContent">
+  <div class="top">
+    <div>
+      <img class="access2" src="images/access2.png">
+    </div>
+    <div>
+      <img class="access3" src="images/access3.png">
+    </div>
+  </div>
+  <center class="transaction">
+    Transaction Receipt 
+  </center>
+  <center class="g-top">
+    Generated from <span class="accessmore">
+     AccessMore
+    </span> on <span id="date">
+      
+    </span>
+    /<span id="month">
+      
+    </span>
+   / <span id="year">
+      
+    </span>
+    <span id="time">
+      
+    </span>
+  </center>
+  <div class="grid">
+    <div class="label">
+      Transaction Amount:
+    </div>
+    <div class="result">
+      N<span class="result" id="first-info">
+        1,000
+      </span>.00
+    </div>
+  </div>
+  <div class="line">
+    ___________________________________________
+  </div>
+  <div class="grid">
+    <div class="label">
+      Transaction Type:
+    </div>
+    <div class="result">
+      INTER-BANK
+    </div>
+  </div>
+  <div class="line">
+    ___________________________________________
+  </div>
+  <div class="grid">
+    <div class="label">
+      Transaction Date:
+    </div>
+    <div class="result">
+      <span id="yearr">
+        
+      </span>
+      -
+      <span id="monthh">
+        
+      </span>
+      -
+      <span id="datee">
+        
+      </span>
+      <span id="timee">
+        
+      </span>
+    </div>
+  </div>
+  <div class="line">
+    ___________________________________________
+  </div> 
+  <div class="grid">
+    <div class="label">
+      Sender:
+    </div>
+    <div class="result" id="second-info">
+      Dee Jay 
+    </div>
+  </div>
+  <div class="line">
+    ___________________________________________
+  </div>  
+  <div class="grid">
+    <div class="label">
+      Beneficiary:
+    </div>
+    <div class="result">
+      <span class="result" id="third-info">
+        Dee Jay 
+      </span>
+      <br><br>
+      <span class="result" id="four-info">
+        12345678901
+      </span>
+      <br><br>
+      <span class="result" id="five-info">
+        Access Bank plc
+      </span>
+    </div>
+  </div>
+  <div class="line">
+    ___________________________________________
+  </div>
+  <div class="grid">
+    <div class="label">
+      Remark:
+    </div>
+    <div class="result" id="six-info">
+      Bills
+    </div>
+  </div>
+  <div class="line">
+    ___________________________________________
+  </div>
+  <div class="grid">
+    <div class="label">
+      Transaction Reference:
+    </div>
+    <div class="result" id="string_inner_container">
+      NXQ634788744324568986533
+    </div>
+  </div>
+  <div class="line">
+    ___________________________________________
+  </div>
+  <div class="grid">
+    <div class="label">
+      Transaction Status:
+    </div>
+    <div class="result">
+      Transfer Request Successful
+    </div>
+  </div>
+  <div class="line">
+    ___________________________________________
+  </div>
+  <div class="end-info">
+    If you have any questions or would more information, Please call our 24-hour Customer Care on
+    <br>
+    <a href="">
+     0700CalAccess. 0700 3000000 +2341-2712005-7 +234 1-2802500
+    </a> or send us an email to
+    <br>
+    <a href="">
+      contactcenter@accessbankplc.com
+    </a>
+    <br>
+    <span class="thank">
+      Thank you for choosing Access Bank
+    </span>
+  </div>
+  <span class="end">
+    Banking with Access: Branch | ATM | Online | Mobile | Contact center 
+  </span>
+</div>
+  <center>
+   <a class="button" id="download">
+     Download receipt 
+  </a>
+</center>
+<script src="access.js"></script>
+    <script type="text/javascript">
+      function autoClick(){
+        $("#download").click();
+      }
+
+      $(document).ready(function(){
+        var element = $("#htmlContent");
+
+        $("#download").on('click', function(){
+
+          html2canvas(element, {
+            onrendered: function(canvas) {
+              var imageData = canvas.toDataURL("image/jpg");
+              var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-stream");
+              $("#download").attr("download", "image.jpg").attr("href", newData);
+            }
+          });
+
+        });
+      });
+    </script>
+</body>
+</html>

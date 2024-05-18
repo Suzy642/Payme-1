@@ -1,0 +1,90 @@
+body {
+  margin: 0px;
+  background-color: lightgray;
+  font-family: sans-serif;
+}
+
+.receipt-body {
+  width: 450px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid lightgray;
+  padding-bottom: 80px;
+  background-color: white;
+  padding: 20px;
+}
+
+.logo {
+  width: 160px;
+  margin-left: 280px;
+}
+
+.ob {
+  font-weight: bolder;
+  font-size: 19px;
+  margin-bottom: -5px;
+}
+
+.tr {
+  font-size: 10px;
+  margin-top: -4px;
+}
+
+.line {
+  color: lightgray;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+}
+
+.left {
+  font-weight: bold;
+}
+
+.right {
+  color: gray;
+  text-align: right;
+  font-size: 13px;
+}
+
+.inn {
+  font-size: 12px;
+}
+
+.grid2 {
+  display: grid;
+  grid-template-columns: 100px 1fr;
+  column-gap: 50px;
+}
+
+.scan {
+  width: 100px;
+}
+
+.end-right {
+  color: gray;
+  font-size: 10px;
+}
+
+.button {
+  margin-top: 50px;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: blue;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:active {
+  background-color: white;
+  color: blue;
+  border: 2px solid blue;
+}
+  
+

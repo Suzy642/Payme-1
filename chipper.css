@@ -1,0 +1,109 @@
+body {
+  margin: 0px;
+  background-color: lightgray;
+  font-family: sans-serif;
+}
+
+.receipt-body {
+  width: 400px;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid lightgray;
+  padding-bottom: 80px;
+  background-color: white;
+  padding: 20px;
+  position: relative;
+}
+
+.top {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  display: grid;
+  grid-template-columns: 40px 200px 120px;
+  column-gap: 60px;
+  padding: 20px;
+  font-weight: bolder;
+  font-size: 19px;
+}
+
+.top-img {
+  margin-top: 10px;
+  width: 160px;
+}
+
+.green {
+  width: 30px;
+  margin-top: -10px;
+}
+
+.set {
+  font-weight: bolder;
+  padding: 20px 0px;
+}
+
+.amount {
+  font-weight: bolder;
+  font-size: 20px;
+  color: black;
+}
+
+.second-body {
+  margin-top: 70px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  padding: 10px 0px;
+  
+}
+
+.left {
+  color: gray;
+  text-align: left;
+}
+
+.right {
+  font-weight: bold;
+  text-align: right;
+}
+
+.line {
+  color: lightgray;
+}
+
+.share {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 250px;
+  color: white;
+  font-weight: bold;
+  margin-top: 80px;
+  background-color: #A814FF;
+  border-radius: 15px;
+  padding: 15px;
+}
+
+.button {
+  margin-top: 50px;
+  padding: 15px 10px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: blue;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.button:active {
+  background-color: white;
+  color: blue;
+  border: 2px solid blue;
+}
+  
+

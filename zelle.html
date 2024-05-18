@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    ZELLE RECEIPT 
+  </title>
+    <link rel="stylesheet" href="zelle.css">
+       <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
+    </script>
+</head>
+<body onload = "autoClick();">
+  <div class="receipt-body" id = "htmlContent">
+    <center class="ps">
+      Payment Sent
+    </center>
+    <center>
+      <img src="images/mark.png">
+    </center>
+    <center class="amount">
+      Sent &dollar;<span id="first-info">
+        1,000
+      </span>
+      .00
+    </center>
+    <center class="to">
+      to 
+    </center>
+    <center class="name" id="second-info">
+      Dee Jay 
+    </center>
+    <center class="to">
+      From
+    </center>
+    <center class="name" id="third-info">
+      Adv plus Banking - 1747
+    </center>
+    <center class="line">
+      ________________________________________________
+    </center>
+    <center class="note">
+      Investing involves risk. There is always the potential of losing
+      <br>
+    money when you invest in securities. Asset allocation,
+      <br>
+    diversification, and rebalancing do not ensure a profit or protect
+    <br>
+  against loss in declining markets
+    </center>
+    <center class="note2">
+      Bank of America Merrill, their affiliates and advisors do not provide
+      <br>
+      legal, tax or accounting advice. Clients should consult their legal
+      <br>
+    and/or tax advisors before making any financial decisions.
+    </center>
+  </div>
+<center>
+    <a class="button" id="download">
+   Download receipt 
+  </a>
+</center>
+<script src="zelle.js"></script>
+    <script type="text/javascript">
+      function autoClick(){
+        $("#download").click();
+      }
+
+      $(document).ready(function(){
+        var element = $("#htmlContent");
+
+        $("#download").on('click', function(){
+
+          html2canvas(element, {
+            onrendered: function(canvas) {
+              var imageData = canvas.toDataURL("image/jpg");
+              var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-stream");
+              $("#download").attr("download", "image.jpg").attr("href", newData);
+            }
+          });
+
+        });
+      });
+    </script>
+</body>
+</html>

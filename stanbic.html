@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>
+    STANBIC BANK RECEIPT
+  </title>
+  <link rel="stylesheet" href="stanbic.css">
+     <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+    </script>
+    <script src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js">
+    </script>
+</head>
+<body onload = "autoClick();">
+  <div class="receipt-body" id = "htmlContent">
+    <img class="logo" src="images/stanbic.png">
+    <center class="receipt">
+      Receipt 
+    </center>
+    <div class="cover">
+      <center>
+        <img class="mark" src="images/mark2.png">
+      </center>
+      <center class="ts">
+        Transaction Successful
+      </center>
+      <center class="amount-cover">
+        NGN
+        <span class="amount" id="first-info">
+          1,000
+        </span>
+        .00
+      </center>
+      <center class="name" id="four-info">
+        Dee Jay 
+      </center>
+      <center class="acct">
+        <span id="six-info">
+          Access Bank Plc
+        </span>-
+        <span id="five-info">
+          12345678901
+        </span>
+      </center>
+      <center class="line">
+        ________________________________________________________
+      </center>
+      <center class="tt">
+        Transaction Type
+      </center>
+      <center class="oop" id="second-info">
+        ONE OFF PAYMENT 
+      </center>
+      <center>
+        from
+      </center>
+      <center class="acct-number" id="third-info">
+        12345678901
+      </center>
+      <center>
+        Reference ID
+      </center>
+      <center class="oop"id="string_inner_container">
+        64427747645
+      </center>
+      <center>
+        Date
+      </center>
+      <center class="oop">
+        <span id="date">
+          
+        </span>
+        /
+        <span id="month">
+          
+        </span>
+        /
+        <span id="year">
+          
+        </span>
+      </center>
+      <center>
+        Narration 
+      </center>
+      <center class="oop" id="seven-info">
+        Bills
+      </center>
+    </div>
+    <div class="cover2">
+      <center class="disclaimer">
+        Disclaimer 
+      </center>
+      Any confirmation of a transaction must not be constructed as a confirmation of credit into beneficiary's account.
+Due to the nature of internet transactions may be subjected to interruption, transmission blockout, delayed transmission and incorrect data transmission.
+The bank is not liable for malfunction in communication facilities not with it's control that may affect the accuracy of timeline of messages and transactions you send.
+All transactions are subject to our verification and our normal fraud checks
+    </div>
+  </div>
+  <center>
+      <a class="button" id="download">
+   Download receipt 
+  </a>
+</center>
+<script src="stanbic.js"></script>
+    <script type="text/javascript">
+      function autoClick(){
+        $("#download").click();
+      }
+
+      $(document).ready(function(){
+        var element = $("#htmlContent");
+
+        $("#download").on('click', function(){
+
+          html2canvas(element, {
+            onrendered: function(canvas) {
+              var imageData = canvas.toDataURL("image/jpg");
+              var newData = imageData.replace(/^data:image\/jpg/, "data:application/octet-stream");
+              $("#download").attr("download", "image.jpg").attr("href", newData);
+            }
+          });
+
+        });
+      });
+    </script>
+</body>
+</html>
